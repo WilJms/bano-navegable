@@ -142,7 +142,7 @@ export class BathroomRenderer {
   windowInfo() {return this.windowMoving.map(({object,x,travel})=>({name:object.name,position:object.position.toArray(),closedX:x,travel}));}
   restoreEnvironment() {this.environments.forEach(e=>e.dispose());this.environments.clear();this.environmentWindowPositions.clear();this.pmrem.dispose();this.pmrem=new T.PMREMGenerator(this.renderer);this.renderer.shadowMap.needsUpdate=true;}
   setQuality(q:Quality) {this.quality=q;const p=profiles[q];Object.values(this.mirrors).forEach(m=>{const rt=m.getRenderTarget();const samples=q==='alto'?4:q==='equilibrado'?2:0;if(rt.samples!==samples){rt.samples=samples;rt.dispose();}rt.setSize(p.mirror,p.mirror);});this.resize();}
-  resize() {const p=profiles[this.quality];this.renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,p.dpr));this.renderer.setSize(innerWidth,innerHeight);this.camera.aspect=innerWidth/innerHeight;this.camera.updateProjectionMatrix();}
+  resize() {const p=profiles[this.quality];this.renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,p.dpr));const w=this.canvas.clientWidth||innerWidth,h=this.canvas.clientHeight||innerHeight;this.renderer.setSize(w,h,false);this.camera.aspect=w/h;;this.camera.updateProjectionMatrix();}
   render() {this.renderer.info.reset();this.renderer.render(this.scene,this.camera);}
   info() {const gl=this.renderer.getContext();const ext=gl.getExtension('WEBGL_debug_renderer_info');return {gpu:ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):gl.getParameter(gl.RENDERER),memory:{...this.renderer.info.memory},render:{...this.renderer.info.render},programs:this.renderer.info.programs?.length,dpr:this.renderer.getPixelRatio(),resolution:[this.canvas.width,this.canvas.height]};}
 }
