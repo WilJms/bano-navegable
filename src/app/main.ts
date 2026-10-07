@@ -108,9 +108,23 @@ async function start() {
     $('#help').addEventListener('click',()=>{controls.stop();controls.enabled=false;document.exitPointerLock?.();dialog.showModal();});
     const closeHelp=()=>{dialog.close();controls.enabled=true;canvas.focus();};
     $('#close-help').addEventListener('click',closeHelp);$('#understood').addEventListener('click',closeHelp);dialog.addEventListener('close',()=>{controls.enabled=true;controls.stop();});
-    $('#fullscreen').hidden=!document.fullscreenEnabled;
-    $('#fullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{message('Este navegador no permitió pantalla completa.');}});
-    window.addEventListener('resize',()=>{controls.stop();app.resize();});
+    const doc=document as Document&{webkitFullscreenEnabled?:boolean;webkitFullscreenElement?:Element|null;webkitExitFullscreen?:()=>void};
+    const root=document.documentElement as HTMLElement&{webkitRequestFullscreen?:()=>void};
+    const canFullscreen=!!(document.fullscreenEnabled||doc.webkitFullscreenEnabled);
+    const installed=matchMedia('(display-mode:standalone)').matches||(navigator as Navigator&{standalone?:boolean}).standalone===true;
+    const iphone=/iPhone|iPod/.test(navigator.userAgent);
+    $('#fullscreen').hidden=!canFullscreen&&!(iphone&&!installed);
+    $('#fullscreen').addEventListener('click',async()=>{
+      if(!canFullscreen){message('En iPhone: toca el botón Compartir y luego «Agregar a pantalla de inicio». Al abrir el baño desde ese ícono se verá a pantalla completa.');setTimeout(()=>{notice.hidden=true;},9000);return;}
+      try{
+        if(document.fullscreenElement||doc.webkitFullscreenElement){if(document.exitFullscreen)await document.exitFullscreen();else doc.webkitExitFullscreen?.();}
+        else if(root.requestFullscreen)await root.requestFullscreen();else root.webkitRequestFullscreen?.();
+      }catch{message('Este navegador no permitió pantalla completa.');}
+    });
+    const onResize=()=>{controls.stop();app.resize();};
+    window.addEventListener('resize',onResize);
+    window.addEventListener('orientationchange',()=>{setTimeout(onResize,250);setTimeout(onResize,700);});
+    new ResizeObserver(()=>app.resize()).observe(canvas);
     retry.addEventListener('click',()=>void chooseDesign(requested));
     cancel.addEventListener('click',()=>{++requestId;pending?.abort();status.loading=false;status.requested=status.active;notice.hidden=true;});
     canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();contextLost=true;controls.stop();message('Se perdió el contexto gráfico. Recuperando…');});
