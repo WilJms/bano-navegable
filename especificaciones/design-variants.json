@@ -1,0 +1,137 @@
+{
+  "spec_version": "2.0",
+  "purpose": "Dos conjuntos cerrados de diseño; no una implementación ni un selector libre de materiales.",
+  "default_design": "original",
+  "shared_window_id": "window_original_white_two_leaf",
+  "selector": {
+    "type": "two_complete_navigable_designs",
+    "url_parameter": "diseno",
+    "url_priority_over_saved_preference": true,
+    "invalid_value_fallback": "original",
+    "preserve": [
+      "camera_position",
+      "camera_orientation",
+      "camera_fov",
+      "quality_profile",
+      "shower_door_state"
+    ],
+    "atomic_apply": true,
+    "latest_requested_design_wins": true,
+    "on_failure": "Keep current complete design and allow retry",
+    "render_loop_count": 1
+  },
+  "invariants": [
+    "room_dimensions",
+    "openings",
+    "window_geometry_and_white_frame",
+    "toilet_location_and_facing",
+    "shower_footprint",
+    "vanity_wall_frontal_order",
+    "cabinet_lower_door_assignment",
+    "collision_world",
+    "exterior_layout",
+    "sun_direction"
+  ],
+  "designs": [
+    {
+      "id": "original",
+      "ui_label": "Diseño 1 · Original",
+      "reference_ids": [
+        "O1",
+        "O2"
+      ],
+      "window_id": "window_original_white_two_leaf",
+      "materials": {
+        "wall_tiles": "Large beige/sand stone-look tiles, very subtle grain/veins",
+        "floor_tiles": "Coordinated beige, large approximately square tiles, subtle satin",
+        "wood": "Warm honey-brown, real-scale grain, satin finish",
+        "countertop": "White stone-look, subtle grey veins",
+        "faucet_shower_hardware_handles": "Chrome or silver metal",
+        "glass_frame": "Minimal discreet silver hardware/profile",
+        "glass": "Clear, very subtle green-blue edges",
+        "window_frame": "white_locked_shared",
+        "ceramics_and_tray": "white",
+        "ceiling": "white"
+      },
+      "mirror": {
+        "id": "mirror_original_rectangular",
+        "geometry": "large_rectangle",
+        "anchor": "centered_above_vanity_center",
+        "backlight": false,
+        "real_camera_dependent_reflection": true
+      },
+      "lighting": {
+        "profile_id": "lighting_original",
+        "bake_group": "lightmaps_original",
+        "mirror_halo_contribution": false,
+        "same_shared_sun_and_window": true
+      },
+      "geometry_overrides_allowed": [
+        "mirror_surface",
+        "minor_shower_profile_detail"
+      ]
+    },
+    {
+      "id": "nuevo",
+      "ui_label": "Diseño 2 · Nuevo",
+      "reference_ids": [
+        "N1",
+        "N2"
+      ],
+      "window_id": "window_original_white_two_leaf",
+      "explicit_reference_exceptions": [
+        "Reject narrow dark window in N1; use O1 window unchanged",
+        "Two side cabinets per user clarification even when outside image crop"
+      ],
+      "materials": {
+        "wall_tiles": "Large warm grey/greige stone-look, visible soft light veining",
+        "floor_tiles": "Matching warm grey stone, large approximately square, satin",
+        "wood": "Warm brown, somewhat deeper appearance than original, natural grain",
+        "countertop": "White stone-look, subtle grey veins",
+        "faucet_shower_hardware_handles": "Matte or satin black finish with legible volume",
+        "glass_frame": "Thin black profile and black handle, no heavy grid",
+        "glass": "Clear, not tinted black",
+        "window_frame": "white_locked_shared",
+        "ceramics_and_tray": "white",
+        "ceiling": "white"
+      },
+      "mirror": {
+        "id": "mirror_new_rounded_backlit",
+        "geometry": "rounded_outline_large_circle_initial_hypothesis",
+        "full_outline_certain_from_reference": false,
+        "anchor": "centered_above_vanity_center",
+        "backlight": true,
+        "backlight_color_family": "warm_white",
+        "backlight_illuminates_near_wall": true,
+        "real_camera_dependent_reflection": true
+      },
+      "lighting": {
+        "profile_id": "lighting_nuevo",
+        "bake_group": "lightmaps_nuevo",
+        "mirror_halo_contribution": true,
+        "same_shared_sun_and_window": true,
+        "original_bake_reuse_without_validation_forbidden": true
+      },
+      "geometry_overrides_allowed": [
+        "mirror_surface",
+        "mirror_backlight_support",
+        "minor_shower_profile_detail"
+      ]
+    }
+  ],
+  "quality_profiles_independent_of_design": [
+    "alto",
+    "equilibrado",
+    "ligero"
+  ],
+  "initial_performance_goals_not_guarantees": {
+    "desktop_target_fps": 60,
+    "mobile_target_fps": 30,
+    "first_variant_plus_shared_transfer_target_mb": [
+      15,
+      30
+    ],
+    "repeat_design_switches_for_leak_test": 20,
+    "performance_route_duration_seconds_min": 60
+  }
+}

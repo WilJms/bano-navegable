@@ -1,0 +1,627 @@
+{
+  "date": "2026-10-06",
+  "summary": {
+    "PASS": 57,
+    "NO_PROBADO": 1
+  },
+  "scope": "Build estático local final; lectura humana de capturas y pruebas automatizadas, con límites explícitos.",
+  "cases": [
+    {
+      "id": "VIS-01",
+      "title": "Dos diseños 3D reales",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-02",
+      "title": "Distribución común",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-03",
+      "title": "Una sola ventana blanca de dos hojas",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html",
+        "pruebas/window-cabinet-geometry.json",
+        "capturas/separaciones-log.json",
+        "capturas/nuevo-ventana-hueco.png"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md. Ajuste posterior: hueco de 25 cm sin voladizo, repiseros de 44 cm y 3,5 cm libres a cada lado de la encimera."
+    },
+    {
+      "id": "VIS-04",
+      "title": "Hueco y exterior con profundidad",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html",
+        "pruebas/window-cabinet-geometry.json",
+        "capturas/separaciones-log.json",
+        "capturas/nuevo-ventana-hueco.png"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md. Ajuste posterior: hueco de 25 cm sin voladizo, repiseros de 44 cm y 3,5 cm libres a cada lado de la encimera."
+    },
+    {
+      "id": "VIS-05",
+      "title": "Exterior oblicuo",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html",
+        "pruebas/window-cabinet-geometry.json",
+        "capturas/separaciones-log.json",
+        "capturas/nuevo-ventana-hueco.png"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md. Ajuste posterior: hueco de 25 cm sin voladizo, repiseros de 44 cm y 3,5 cm libres a cada lado de la encimera."
+    },
+    {
+      "id": "VIS-06",
+      "title": "Dos repiseros y vanitorio central",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html",
+        "pruebas/window-cabinet-geometry.json",
+        "capturas/separaciones-log.json",
+        "capturas/nuevo-ventana-hueco.png"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md. Ajuste posterior: hueco de 25 cm sin voladizo, repiseros de 44 cm y 3,5 cm libres a cada lado de la encimera."
+    },
+    {
+      "id": "VIS-07",
+      "title": "Lados de muebles sin inversión",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html",
+        "pruebas/window-cabinet-geometry.json",
+        "capturas/separaciones-log.json",
+        "capturas/nuevo-ventana-hueco.png"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md. Ajuste posterior: hueco de 25 cm sin voladizo, repiseros de 44 cm y 3,5 cm libres a cada lado de la encimera."
+    },
+    {
+      "id": "VIS-08",
+      "title": "Puertas inferiores sólo donde corresponden",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-09",
+      "title": "Inodoro fuera de ducha",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-10",
+      "title": "Baldas y accesorios sobre sanitario",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-11",
+      "title": "Tipología completa de ducha",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-12",
+      "title": "Vanitorio y lavabo detallados",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html",
+        "pruebas/window-cabinet-geometry.json",
+        "capturas/separaciones-log.json",
+        "capturas/nuevo-ventana-hueco.png"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md. Ajuste posterior: hueco de 25 cm sin voladizo, repiseros de 44 cm y 3,5 cm libres a cada lado de la encimera."
+    },
+    {
+      "id": "VIS-13",
+      "title": "Materiales del original",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-14",
+      "title": "Materiales del nuevo",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-15",
+      "title": "Reflejo real del espejo",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-16",
+      "title": "Contorno reflectante y halo nuevos",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-17",
+      "title": "Vidrios superpuestos",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-18",
+      "title": "Luz correspondiente a la variante",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-19",
+      "title": "Sol y ventana coherentes",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-20",
+      "title": "Cuatro comparaciones de referencia",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VIS-21",
+      "title": "Encuentros y color",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html",
+        "pruebas/lightmap-uv-audit.json"
+      ],
+      "observation": "Juntas rebajadas aproximadamente 1–1,5 mm, encuentros y mapas revisados. Auditoría UV por muestreo, no prueba exhaustiva de triángulos subpíxel."
+    },
+    {
+      "id": "VIS-22",
+      "title": "Acceso y profundidad adyacente",
+      "status": "PASS",
+      "evidence": [
+        "capturas/capture-log.json",
+        "comparacion.html"
+      ],
+      "observation": "Inspección visual del build, anclajes y vistas próximas. Aproximaciones declaradas en COMPARACION_REFERENCIAS.md."
+    },
+    {
+      "id": "VAR-01",
+      "title": "Cambio sin mover cámara",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "VAR-02",
+      "title": "Conservar calidad e interacciones",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "VAR-03",
+      "title": "Sin mezcla parcial de diseños",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "VAR-04",
+      "title": "Solicitudes rápidas",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "VAR-05",
+      "title": "Fallo de recurso diferido",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "VAR-06",
+      "title": "Reintento tras fallo",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "VAR-07",
+      "title": "Independencia de recursos compartidos",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Caché acotada, cambios de perfil y restauración de contexto comprobados. Agotamiento real de memoria de GPU: NO PROBADO."
+    },
+    {
+      "id": "VAR-08",
+      "title": "Enlace directo de diseño",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "VAR-09",
+      "title": "Vistas independientes de diseño",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "VAR-10",
+      "title": "Sin dependencia de almacenamiento",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "NAV-01",
+      "title": "Paseo humano cómodo",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "NAV-02",
+      "title": "Colisión con obstáculos",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "NAV-03",
+      "title": "Esquinas y grandes deltas",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "NAV-04",
+      "title": "Entrada válida a ducha",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "NAV-05",
+      "title": "Pointer Lock y alternativa",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "NAV-06",
+      "title": "Pérdida de foco",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "NAV-07",
+      "title": "Táctil funcional",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "PASS sólo para emulación de dos contactos Chromium y cambio de orientación. Teléfono físico: NO PROBADO."
+    },
+    {
+      "id": "NAV-08",
+      "title": "Poses seguras de vistas y reset",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "NAV-09",
+      "title": "Interfaz accesible mínima",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/e2e-final.json",
+        "pruebas/independent-build.log"
+      ],
+      "observation": "Prueba real en Chromium y Firefox más verificación geométrica."
+    },
+    {
+      "id": "DEP-01",
+      "title": "Build desde copia limpia",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/independent-build.log",
+        "pruebas/independent-copy.json",
+        "inventario-entrega.json"
+      ],
+      "observation": "Validación local; no publicación remota."
+    },
+    {
+      "id": "DEP-02",
+      "title": "Ruta raíz y prefijo",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/independent-build.log",
+        "pruebas/independent-copy.json",
+        "inventario-entrega.json",
+        "pruebas/http-matrix-final.json"
+      ],
+      "observation": "Validación local; no publicación remota."
+    },
+    {
+      "id": "DEP-03",
+      "title": "Assets presentes y tipos correctos",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/independent-build.log",
+        "pruebas/independent-copy.json",
+        "inventario-entrega.json",
+        "pruebas/http-matrix-final.json"
+      ],
+      "observation": "Validación local; no publicación remota."
+    },
+    {
+      "id": "DEP-04",
+      "title": "Sin servicios externos de runtime",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/independent-build.log",
+        "pruebas/independent-copy.json",
+        "inventario-entrega.json",
+        "pruebas/http-matrix-final.json"
+      ],
+      "observation": "Validación local; no publicación remota."
+    },
+    {
+      "id": "DEP-05",
+      "title": "Consola y shaders",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/independent-build.log",
+        "pruebas/independent-copy.json",
+        "inventario-entrega.json"
+      ],
+      "observation": "Validación local; no publicación remota."
+    },
+    {
+      "id": "DEP-06",
+      "title": "Carpeta limpia y documentación",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/independent-build.log",
+        "pruebas/independent-copy.json",
+        "inventario-entrega.json"
+      ],
+      "observation": "Validación local; no publicación remota."
+    },
+    {
+      "id": "DEP-07",
+      "title": "Workflow coherente",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/independent-build.log",
+        "pruebas/independent-copy.json",
+        "inventario-entrega.json"
+      ],
+      "observation": "Validación local; no publicación remota."
+    },
+    {
+      "id": "DEP-08",
+      "title": "Licencias y procedencia",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/independent-build.log",
+        "pruebas/independent-copy.json",
+        "inventario-entrega.json"
+      ],
+      "observation": "Validación local; no publicación remota."
+    },
+    {
+      "id": "DEP-09",
+      "title": "No declarar publicación inexistente",
+      "status": "PASS",
+      "evidence": [
+        "pruebas/independent-build.log",
+        "pruebas/independent-copy.json",
+        "inventario-entrega.json"
+      ],
+      "observation": "Validación local; no publicación remota."
+    },
+    {
+      "id": "PER-01",
+      "title": "Medición por diseño",
+      "status": "PASS",
+      "evidence": [
+        "rendimiento/benchmark.json",
+        "rendimiento/loading-and-memory.json",
+        "pruebas/e2e-final.json"
+      ],
+      "observation": "Mediciones identificadas; no se extrapolan a otros equipos."
+    },
+    {
+      "id": "PER-02",
+      "title": "Perfiles independientes",
+      "status": "PASS",
+      "evidence": [
+        "rendimiento/benchmark.json",
+        "rendimiento/loading-and-memory.json",
+        "pruebas/e2e-final.json"
+      ],
+      "observation": "Mediciones identificadas; no se extrapolan a otros equipos."
+    },
+    {
+      "id": "PER-03",
+      "title": "Veinte cambios sin fugas",
+      "status": "PASS",
+      "evidence": [
+        "rendimiento/benchmark.json",
+        "rendimiento/loading-and-memory.json",
+        "pruebas/e2e-final.json"
+      ],
+      "observation": "Mediciones identificadas; no se extrapolan a otros equipos."
+    },
+    {
+      "id": "PER-04",
+      "title": "Carga inicial y diferida",
+      "status": "PASS",
+      "evidence": [
+        "rendimiento/benchmark.json",
+        "rendimiento/loading-and-memory.json",
+        "pruebas/e2e-final.json"
+      ],
+      "observation": "Mediciones identificadas; no se extrapolan a otros equipos."
+    },
+    {
+      "id": "PER-05",
+      "title": "Pérdida de contexto y visibilidad",
+      "status": "PASS",
+      "evidence": [
+        "rendimiento/benchmark.json",
+        "rendimiento/loading-and-memory.json",
+        "pruebas/e2e-final.json"
+      ],
+      "observation": "Mediciones identificadas; no se extrapolan a otros equipos."
+    },
+    {
+      "id": "PER-06",
+      "title": "Compatibilidad delimitada",
+      "status": "PASS",
+      "evidence": [
+        "rendimiento/benchmark.json",
+        "rendimiento/loading-and-memory.json",
+        "pruebas/e2e-final.json"
+      ],
+      "observation": "Chromium/Firefox local y emulación táctil identificados. WebKit: atlas GPU y controles de ventana. Safari nativo: inspección visual y controles, sin medir FPS. iPhone/Android físicos y GPU de CI: NO PROBADO."
+    },
+    {
+      "id": "OPT-01",
+      "title": "Modo Foto si se ofrece",
+      "status": "NO_PROBADO",
+      "evidence": [
+        "capturas/interfaz-escritorio.png",
+        "pruebas/e2e-final.json"
+      ],
+      "observation": "Los controles ofrecidos se probaron. Modo Foto no implementado, fuera del alcance opcional."
+    },
+    {
+      "id": "OPT-02",
+      "title": "Extras terminados o ausentes",
+      "status": "PASS",
+      "evidence": [
+        "capturas/interfaz-escritorio.png",
+        "pruebas/e2e-final.json"
+      ],
+      "observation": "Los controles ofrecidos se probaron. Modo Foto no implementado, fuera del alcance opcional."
+    }
+  ]
+}

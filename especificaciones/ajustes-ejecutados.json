@@ -1,0 +1,22 @@
+{
+  "reason": "Aclaración del usuario: ventana retranqueada con superficie útil dentro del muro, sin barra saliente; ambos repiseros algo más anchos y con una pequeña separación del vanitorio.",
+  "dimensions_status": "Hipótesis ajustables; no son medidas de obra.",
+  "window": {
+    "wall_thickness_m": 0.36,
+    "usable_recess_depth_m": 0.25,
+    "sill_projection_m": 0,
+    "operable_leaf": 0,
+    "opening_mechanism": "left_leaf_slides_right_on_separate_track",
+    "preserve_open_state_on_design_switch": true
+  },
+  "shower": {
+    "entrance_end_closed_with_fixed_glass": true,
+    "entrance_end_matches_rear_return": true,
+    "access_via_corridor_sliding_leaf": true
+  },
+  "vanity_wall_assembly": {
+    "side_cabinet_width_m": 0.44,
+    "countertop_width_m": 1.72,
+    "countertop_side_gap_m": 0.035
+  }
+}

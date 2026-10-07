@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/><meta name="theme-color" content="#f5f3ee"/><meta name="description" content="Recorre un mismo baño en dos diseños. Compara sus acabados desde cualquier punto del espacio."/><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233b4a40'/%3E%3Cpath d='M17 43V19h13a8 8 0 010 16H17m13-16h7a12 12 0 010 24H17' stroke='%23fff' stroke-width='4' fill='none'/%3E%3C/svg%3E"/><title>Baño · Dos diseños, un espacio</title></head>
+<body>
+  <canvas id="scene" tabindex="0" aria-label="Baño tridimensional. Arrastra para mirar; usa WASD o flechas para caminar."></canvas>
+  <header class="topbar chrome">
+    <div class="identity"><span class="brand">Baño<span class="brand-dot">.</span></span><span id="finish-label">Arena, madera y cromo</span></div>
+    <div class="designs" role="group" aria-label="Elegir diseño">
+      <button data-design="original" aria-pressed="true"><i class="swatch original"></i><span>Diseño 1</span></button>
+      <button data-design="nuevo" aria-pressed="false"><i class="swatch nuevo"></i><span>Diseño 2</span></button>
+    </div>
+    <div class="utilities"><button id="help" class="icon-button" aria-label="Ayuda y controles" title="Ayuda">?</button><button id="fullscreen" class="icon-button" aria-label="Pantalla completa" title="Pantalla completa"><svg viewBox="0 0 24 24"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></button></div>
+  </header>
+  <div class="bottom chrome">
+    <div class="viewbar" role="group" aria-label="Vistas del baño"><span class="view-label">Vistas</span><button data-view="diagonal" aria-pressed="true">Diagonal</button><button data-view="acceso" aria-pressed="false">Acceso</button><button data-view="frontal_vanitorio" aria-pressed="false">Vanitorio</button><span class="divider"></span><button id="reset" class="icon-button" aria-label="Reiniciar posición" title="Reiniciar posición"><svg viewBox="0 0 24 24"><path d="M4 10a8 8 0 111 7M4 4v6h6"/></svg></button></div>
+    <div class="bottom-row"><span class="hint"><kbd>W A S D</kbd> Caminar <span>·</span> Arrastrar para mirar</span><button id="walk">Caminar con ratón</button><div class="quality"><label for="quality">Calidad</label><select id="quality"><option value="auto">Automática</option><option value="alto">Alta</option><option value="equilibrado">Equilibrada</option><option value="ligero">Ligera</option></select><span id="auto-profile"></span></div></div>
+  </div>
+  <div class="side-actions chrome"><button id="shower" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 21V3h12v18M9 3v18m5-10v3"/></svg><span>Abrir mampara</span></button><button id="window" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M3 4h18v16H3zM12 4v16M9 11v3m6-3v3"/></svg><span>Abrir ventana</span></button></div>
+  <div id="joystick" aria-label="Control táctil para caminar" class="touch-control chrome"><span id="stick"></span></div>
+  <span class="touch-look chrome">Arrastra para mirar</span>
+  <div id="loading" role="status" aria-live="polite"><span class="loading-mark">B.</span><h1>Entrando al baño</h1><p id="loading-label">Cargando geometría y materiales</p><progress id="progress"></progress><span id="progress-count"></span></div>
+  <div id="notification" class="notice" role="status" aria-live="polite" hidden><span id="notice-text"></span><button id="retry" hidden>Reintentar</button><button id="cancel" hidden>Cancelar</button></div>
+  <dialog id="help-dialog"><button id="close-help" class="close" aria-label="Cerrar ayuda">×</button><h2>Un espacio para recorrer</h2><p>Compara los dos diseños desde el mismo lugar. Cambiar el acabado conserva tu posición y la apertura de la mampara y la ventana.</p><dl><dt>Caminar</dt><dd>WASD, flechas o control táctil.</dd><dt>Mirar</dt><dd>Arrastra sobre el baño. En ordenador, «Caminar con ratón» captura el cursor; Escape lo libera.</dd><dt>Explorar la ducha</dt><dd>Abre la mampara y entra por el paso junto al tirador.</dd><dt>Abrir la ventana</dt><dd>«Abrir ventana» desliza la hoja izquierda sobre la derecha. Pulsa de nuevo para cerrarla.</dd><dt>Volver</dt><dd>Elige una vista o reinicia la posición.</dd></dl><p class="note">Las dimensiones son una reconstrucción visual aproximada.</p><button id="understood" class="primary">Entendido</button></dialog>
+  <div id="view-fade" aria-hidden="true"></div>
+  <script type="module" src="/src/app/main.ts"></script>
+</body></html>

@@ -1,0 +1,14 @@
+import {chromium} from '@playwright/test';
+import {writeFile,mkdir} from 'node:fs/promises';
+import path from 'node:path';
+const out=path.resolve(process.env.EVIDENCE_DIR||'../evidencias/rendimiento');await mkdir(out,{recursive:true});
+const browser=await chromium.launch({channel:'chromium',headless:false,args:['--use-angle=metal']});const page=await browser.newPage({viewport:{width:1440,height:960}});
+const requests=[],errors=[];page.on('response',async r=>{requests.push({url:new URL(r.url()).pathname,status:r.status(),mime:r.headers()['content-type'],bytes:Number(r.headers()['content-length']||0)});});page.on('pageerror',e=>errors.push(e.message));
+const started=Date.now();await page.goto('http://127.0.0.1:4173/?diseno=original&qa=1');await page.waitForFunction(()=>window.__bano?.snapshot().ready);const coldMs=Date.now()-started;
+const deferred=Date.now();await page.evaluate(()=>window.__bano.chooseDesign('nuevo'));const deferredMs=Date.now()-deferred;
+await page.evaluate(()=>window.__bano.chooseDesign('original'));const warm=Date.now();await page.evaluate(()=>window.__bano.chooseDesign('nuevo'));const cachedMs=Date.now()-warm;
+const before=await page.evaluate(()=>window.__bano.snapshot());
+for(let i=0;i<20;i++)await page.evaluate(i=>{window.__bano.setQuality(['alto','equilibrado','ligero'][i%3]);return window.__bano.chooseDesign(i%2?'nuevo':'original');},i);
+const after=await page.evaluate(()=>window.__bano.snapshot());
+const data={environment:'Local HTTP, no network throttling. Fresh browser context. Includes decode, materials, shader compilation and initial local reflection probe.',browser:browser.version(),coldOriginalMs:coldMs,deferredNuevoMs:deferredMs,cachedNuevoMs:cachedMs,resourceCountsBefore:before.memory,resourceCountsAfter:after.memory,renderLoops:after.renderLoops,snapshot:after,requests,errors};
+await writeFile(path.join(out,'loading-and-memory.json'),JSON.stringify(data,null,2));console.log(JSON.stringify(data,null,2));await browser.close();

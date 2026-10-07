@@ -1,0 +1,221 @@
+{
+  "coordinateSystem": {
+    "units": "meters",
+    "handedness": "right",
+    "origin": "Centro del umbral sobre el suelo terminado",
+    "up": "+Y",
+    "right_when_entering": "+X",
+    "entry_to_window": "-Z",
+    "vanity_wall": "-X",
+    "shower_toilet_wall": "+X",
+    "viewer_facing_vanity_forward": "-X",
+    "viewer_facing_vanity_right": "-Z",
+    "viewer_facing_vanity_left": "+Z",
+    "supersedes_v1_positive_z_toward_window": true
+  },
+  "room": {
+    "width_x": 2.45,
+    "length_along_negative_z": 3.3,
+    "height_y": 2.55,
+    "wall_thickness": 0.12
+  },
+  "executedAdjustments": {
+    "reason": "Aclaraci\u00f3n del usuario: ventana retranqueada con superficie \u00fatil dentro del muro, sin barra saliente; ambos repiseros algo m\u00e1s anchos y con una peque\u00f1a separaci\u00f3n del vanitorio.",
+    "dimensions_status": "Hip\u00f3tesis ajustables; no son medidas de obra.",
+    "window": {
+      "wall_thickness_m": 0.36,
+      "usable_recess_depth_m": 0.25,
+      "sill_projection_m": 0,
+      "operable_leaf": 0,
+      "opening_mechanism": "left_leaf_slides_right_on_separate_track",
+      "preserve_open_state_on_design_switch": true
+    },
+    "shower": {
+      "entrance_end_closed_with_fixed_glass": true,
+      "entrance_end_matches_rear_return": true,
+      "access_via_corridor_sliding_leaf": true
+    },
+    "vanity_wall_assembly": {
+      "side_cabinet_width_m": 0.44,
+      "countertop_width_m": 1.72,
+      "countertop_side_gap_m": 0.035
+    }
+  },
+  "anchors": {
+    "window_original_white_two_leaf": {
+      "position": [
+        -0.35,
+        1.625,
+        -3.3
+      ],
+      "size": [
+        0.95,
+        1.35,
+        0.36
+      ],
+      "leafCount": 2,
+      "frame": "white",
+      "recessDepth": 0.25,
+      "sillProjection": 0,
+      "wallFaceZ": -3.2904999999999998,
+      "frameFrontZ": -3.5404999999999998,
+      "operableLeaf": 0,
+      "travelX": 0.4375,
+      "mechanism": "left_leaf_slides_right_on_separate_track"
+    },
+    "entry_door_shared": {
+      "position": [
+        0.43,
+        0.99,
+        0.5
+      ],
+      "size": [
+        0.05,
+        1.98,
+        0.8
+      ],
+      "open": true
+    },
+    "cabinet_left_half_closed": {
+      "position": [
+        -1.045,
+        1.05,
+        -0.5349999999999999
+      ],
+      "size": [
+        0.36,
+        2.1,
+        0.44
+      ],
+      "closedHeightFraction": 0.5
+    },
+    "cabinet_right_open": {
+      "position": [
+        -1.045,
+        1.05,
+        -2.7649999999999997
+      ],
+      "size": [
+        0.36,
+        2.1,
+        0.44
+      ],
+      "closedHeightFraction": 0.0
+    },
+    "vanity_center": {
+      "position": [
+        -0.95,
+        0.43,
+        -1.65
+      ],
+      "size": [
+        0.55,
+        0.86,
+        1.68
+      ]
+    },
+    "toilet_shared": {
+      "position": [
+        0.875,
+        0.0,
+        -2.72
+      ],
+      "size": [
+        0.72,
+        0.92,
+        0.41
+      ],
+      "facing": "-X",
+      "outsideShower": true
+    },
+    "shower_shared": {
+      "position": [
+        0.8,
+        0.027,
+        -1.25
+      ],
+      "size": [
+        0.85,
+        0.055,
+        1.8
+      ]
+    },
+    "shower_door": {
+      "position": [
+        0.35700000000000004,
+        1.18,
+        -0.8
+      ],
+      "size": [
+        0.008,
+        2.205,
+        0.93
+      ],
+      "travel": -0.85,
+      "mechanism": "sliding_along_negative_z"
+    },
+    "mirror_anchor": {
+      "position": [
+        -1.17,
+        1.572,
+        -1.65
+      ],
+      "size": null
+    }
+  },
+  "cameras": {
+    "diagonal": {
+      "position": [
+        -0.24,
+        1.62,
+        0.03
+      ],
+      "target": [
+        0.55,
+        1.2,
+        -2.48
+      ],
+      "fov": 71
+    },
+    "acceso": {
+      "position": [
+        -0.16,
+        1.62,
+        -3.035
+      ],
+      "target": [
+        0,
+        1.28,
+        -0.28
+      ],
+      "fov": 74
+    },
+    "frontal_vanitorio": {
+      "position": [
+        1.0,
+        1.62,
+        -1.65
+      ],
+      "target": [
+        -1.18,
+        1.23,
+        -1.65
+      ],
+      "fov": 69
+    }
+  },
+  "mirror": {
+    "center": [
+      -1.17,
+      1.572,
+      -1.65
+    ],
+    "radius": 0.544
+  },
+  "shower": {
+    "glassX": 0.37500000000000006,
+    "frontZ": -0.35,
+    "backZ": -2.15,
+    "travel": -0.85
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "spec_version": "2.0",
+  "purpose": "Contrato inicial de reconstrucción; no es un modelo 3D ni contiene medidas de obra.",
+  "priority": "Aclaraciones del usuario > invariantes > referencias de cada diseño > semillas ajustables.",
+  "coordinate_system": {
+    "units": "meters",
+    "handedness": "right",
+    "origin": "Centro del umbral sobre el suelo terminado",
+    "up": "+Y",
+    "right_when_entering": "+X",
+    "entry_to_window": "-Z",
+    "vanity_wall": "-X",
+    "shower_toilet_wall": "+X",
+    "viewer_facing_vanity_forward": "-X",
+    "viewer_facing_vanity_right": "-Z",
+    "viewer_facing_vanity_left": "+Z",
+    "supersedes_v1_positive_z_toward_window": true
+  },
+  "locked_rules": {
+    "design_count": 2,
+    "shared_architecture": true,
+    "shared_layout": true,
+    "shared_window": true,
+    "window_count": 1,
+    "window_model_id": "window_original_white_two_leaf",
+    "window_leaf_count": 2,
+    "window_frame_color_family": "white",
+    "reject_new_reference_narrow_dark_window": true,
+    "side_cabinet_count": 2,
+    "vanity_is_centered_between_side_cabinets_not_a_floor_island": true,
+    "toilet_outside_shower": true,
+    "toilet_against_side_wall_not_window_wall": true,
+    "shelves_above_toilet_count": 2,
+    "same_camera_on_design_switch": true,
+    "same_sun_direction_on_design_switch": true,
+    "local_files_only_no_remote_repository_actions": true,
+    "no_required_runtime_external_services": true
+  },
+  "dimensions_status": "ALL_VALUES_BELOW_ARE_ADJUSTABLE_STARTING_ESTIMATES_NOT_MEASUREMENTS",
+  "room_seed_m": {
+    "width_x": 2.45,
+    "length_along_negative_z": 3.3,
+    "height_y": 2.55,
+    "wall_thickness": 0.12
+  },
+  "vanity_wall_assembly": {
+    "viewing_convention": "Persona dentro del baño mirando directamente al vanitorio y espejo.",
+    "frontal_order_left_to_right": [
+      "cabinet_left_half_closed",
+      "vanity_center",
+      "cabinet_right_open"
+    ],
+    "near_entry_id": "cabinet_left_half_closed",
+    "near_window_id": "cabinet_right_open",
+    "side_cabinet_count": 2,
+    "cabinet_left_half_closed": {
+      "role": "Repisero izquierdo frontal; lado del acceso",
+      "wall": "vanity_wall",
+      "upper_section": "open_shelves",
+      "lower_section": "doors",
+      "closed_height_fraction": 0.5,
+      "closed_height_reference": "Altura total del propio mueble",
+      "position_seed_m": [
+        -1.045,
+        1.05,
+        -0.62
+      ],
+      "size_seed_m_xyz": [
+        0.36,
+        2.1,
+        0.38
+      ],
+      "door_animation_required": false
+    },
+    "vanity_center": {
+      "role": "Módulo bajo central entre ambos repiseros, contra la pared",
+      "wall": "vanity_wall",
+      "position_seed_m": [
+        -0.95,
+        0.43,
+        -1.65
+      ],
+      "size_seed_m_xyz": [
+        0.55,
+        0.86,
+        1.68
+      ],
+      "countertop": "white_subtle_grey_veins",
+      "sink": "single_rectangular_inset_or_integrated_real_basin",
+      "faucet": "single_lever_straight_lines",
+      "mirror_centered_on_this_module": true
+    },
+    "cabinet_right_open": {
+      "role": "Repisero derecho frontal; lado de la ventana",
+      "wall": "vanity_wall",
+      "upper_section": "open_shelves",
+      "lower_section": "open_shelves",
+      "closed_height_fraction": 0.0,
+      "position_seed_m": [
+        -1.045,
+        1.05,
+        -2.68
+      ],
+      "size_seed_m_xyz": [
+        0.36,
+        2.1,
+        0.38
+      ],
+      "door_animation_required": false
+    }
+  },
+  "window": {
+    "id": "window_original_white_two_leaf",
+    "authoritative_reference_id": "O1",
+    "source_path": "referencias/diseno_01_original/A_VistaDiagonal.png",
+    "variant_overrides_allowed": false,
+    "frame_color_family": "white",
+    "leaf_count": 2,
+    "operation_interpretation": "two_leaf_sliding_appearance_not_mechanically_verified",
+    "on_wall": "far_wall_negative_z",
+    "opening_center_seed_m": [
+      -0.35,
+      1.625,
+      -3.3
+    ],
+    "opening_width_seed_m": 0.95,
+    "opening_height_seed_m": 1.35,
+    "sill_height_seed_m": 0.95,
+    "real_opening_reveal_sill_and_glazing": true,
+    "outdoor_view": "Tropical-looking vegetation, blue sky and clouds",
+    "near_vegetation_has_depth_and_parallax": true,
+    "flat_photo_pasted_on_window_forbidden": true,
+    "window_opening_interaction_required": false
+  },
+  "shower": {
+    "id": "shower_shared",
+    "on_wall": "right_wall_positive_x",
+    "tray_color": "white",
+    "tray_shape": "long_rectangle_low_profile",
+    "tray_center_seed_xz_m": [
+      0.8,
+      -1.25
+    ],
+    "tray_width_x_seed_m": 0.85,
+    "tray_length_z_seed_m": 1.8,
+    "tray_height_seed_m": 0.045,
+    "drain": "rectangular_or_near_square_metal",
+    "glass": "clear_with_corridor_side_and_transverse_return",
+    "rain_head": "square_flat_wall_arm",
+    "hand_shower_rail_hose_and_mixer_required": true,
+    "same_footprint_in_both_designs": true,
+    "access": "Valid opening; animated leaf with matching collider if used",
+    "retain_open_state_when_switching_design": true,
+    "water_simulation_required": false
+  },
+  "toilet": {
+    "id": "toilet_shared",
+    "on_wall": "right_wall_positive_x",
+    "location": "Beyond shower toward window, outside shower enclosure",
+    "facing": "-X",
+    "cistern_against": "+X_wall",
+    "position_seed_m": [
+      0.875,
+      0.0,
+      -2.72
+    ],
+    "appearance": "white_floor_standing_visible_cistern_closed_lid",
+    "outside_shower": true
+  },
+  "toilet_wall_shelves": {
+    "count": 2,
+    "wall": "right_wall_positive_x",
+    "upper_contents": "Two light-colored plant pots",
+    "lower_contents": "Folded white towels"
+  },
+  "door": {
+    "id": "entry_door_shared",
+    "on_wall": "entry_z_zero",
+    "width_seed_m": 0.8,
+    "height_seed_m": 2.1,
+    "frame": "white",
+    "leaf": "warm_wood",
+    "default_state": "open",
+    "adjacent_space_visible": true,
+    "reflected_door_is_not_a_second_opening": true
+  },
+  "camera": {
+    "eye_height_seed_m": 1.62,
+    "preset_ids": [
+      "diagonal",
+      "acceso",
+      "frontal_vanitorio"
+    ],
+    "front_vanity_qa_required": true,
+    "front_vanity_public_preset": "Offer only after finding a safe accessible pose",
+    "calibration": "Fit reference pose/lens; do not deform room per camera",
+    "shared_comparison_pose_between_designs": true,
+    "design_switch_position_tolerance_m": 0.0001,
+    "design_switch_orientation_tolerance_rad": 0.0001,
+    "design_switch_fov_tolerance_degrees": 0.0001
+  }
+}

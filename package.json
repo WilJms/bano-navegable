@@ -1,0 +1,20 @@
+{
+  "name": "bano-navegable-v2",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "26.5.1" },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && vite build",
+    "preview": "node scripts/serve.mjs",
+    "check:assets": "node scripts/check-assets.mjs",
+    "check:specs": "node scripts/check-specs.mjs",
+    "test:unit": "node --test tests/navigation.test.ts",
+    "test:e2e": "playwright test",
+    "verify": "npm run typecheck && npm run check:assets && npm run check:specs && npm run test:unit"
+  },
+  "dependencies": { "three": "0.186.1" },
+  "devDependencies": { "@playwright/test": "1.63.0", "@types/three": "0.186.0", "typescript": "7.0.2", "vite": "8.3.3" }
+}

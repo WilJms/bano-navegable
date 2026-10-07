@@ -1,0 +1,68 @@
+{
+  "spec_version": "2.0",
+  "reference_count": 4,
+  "window_authority_id": "O1",
+  "references": [
+    {
+      "id": "O1",
+      "design": "original",
+      "path": "referencias/diseno_01_original/A_VistaDiagonal.png",
+      "original_filename": "A_VistaDiagonal.png",
+      "width_px": 1361,
+      "height_px": 1156,
+      "mode": "RGBA",
+      "bytes": 2146250,
+      "sha256": "cb4435b43a7522b71a80a7b17304bf4339d94f012f6f7ce1cfa414cfb8e0cda0",
+      "copied_without_modification": true,
+      "authoritative_window_reference_for_both_designs": true,
+      "window_in_this_image_must_be_replaced": false,
+      "source": "User-provided image in this conversation"
+    },
+    {
+      "id": "O2",
+      "design": "original",
+      "path": "referencias/diseno_01_original/D_Acceso(1).png",
+      "original_filename": "D_Acceso(1).png",
+      "width_px": 518,
+      "height_px": 435,
+      "mode": "RGB",
+      "bytes": 255916,
+      "sha256": "a96fb645e55718dfa6fda7ba0937469a586e0ffb14c1c8aa00364de56ae53bb3",
+      "copied_without_modification": true,
+      "authoritative_window_reference_for_both_designs": false,
+      "window_in_this_image_must_be_replaced": false,
+      "source": "User-provided image in this conversation"
+    },
+    {
+      "id": "N1",
+      "design": "nuevo",
+      "path": "referencias/diseno_02_nuevo/B_Vista_Diagonal(2).png",
+      "original_filename": "B_Vista_Diagonal(2).png",
+      "width_px": 512,
+      "height_px": 435,
+      "mode": "RGB",
+      "bytes": 307051,
+      "sha256": "e2f3c3895e7b4a0e2aff1f61416219a5ced2fd42f9de21f0070634eab921be0b",
+      "copied_without_modification": true,
+      "authoritative_window_reference_for_both_designs": false,
+      "window_in_this_image_must_be_replaced": true,
+      "source": "User-provided image in this conversation"
+    },
+    {
+      "id": "N2",
+      "design": "nuevo",
+      "path": "referencias/diseno_02_nuevo/D_Acceso(2).png",
+      "original_filename": "D_Acceso(2).png",
+      "width_px": 518,
+      "height_px": 435,
+      "mode": "RGB",
+      "bytes": 303850,
+      "sha256": "0c59f8dcbee3e782396979e757f1d0b7a53be8fbf0fe19d3e269d5d144c8c25a",
+      "copied_without_modification": true,
+      "authoritative_window_reference_for_both_designs": false,
+      "window_in_this_image_must_be_replaced": false,
+      "source": "User-provided image in this conversation"
+    }
+  ],
+  "written_clarifications_override_cropped_or_conflicting_details": true
+}

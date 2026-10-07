@@ -1,0 +1,142 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-10-07T01:02:11.073554+00:00",
+  "units": "metres; dimensions are reconstruction hypotheses",
+  "files": [
+    {
+      "path": "nuevo/irradiance.png",
+      "bytes": 11207830,
+      "sha256": "5b2c817a201862105a60ead070ecf5aff314303a19735d41e232c71660330e46",
+      "width": 4096,
+      "height": 4096,
+      "rgbaSha256": "2401ac09def96ccebd53d43c5655ea040062245421aa02c8340d625f36a4be8f"
+    },
+    {
+      "path": "nuevo/stone-normal.jpg",
+      "bytes": 103268,
+      "sha256": "972d811a0b39f3874cd7af239c6d12783b1dc735d89d0fc3b64cacdbc0bd8312",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "path": "nuevo/stone-rough.jpg",
+      "bytes": 164743,
+      "sha256": "a540eb956c1491a8a83436eead0e5fe68ef576371a36598999961bc3cf37043d",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "path": "nuevo/stone.jpg",
+      "bytes": 757878,
+      "sha256": "e91a6e1b37f67ddcaa6cb9e2552f7788f1d34db958e90f65b994614737e329d9",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "path": "nuevo/wood.jpg",
+      "bytes": 894442,
+      "sha256": "fae6091c163eb8945880ebbbdf656314bf7fc218bf1a6fc42fbed8244943e66f",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "path": "original/irradiance.png",
+      "bytes": 10079531,
+      "sha256": "0e75046aa6938c4e1de53cd97c886ebd7b7ee2a31e2a7f71ade6addb8e6aa42a",
+      "width": 4096,
+      "height": 4096,
+      "rgbaSha256": "1375164f31c474dd8d6b1b5a1d11f28c265a2bd15ee32ac95adc88a09dff7e9e"
+    },
+    {
+      "path": "original/stone-normal.jpg",
+      "bytes": 82208,
+      "sha256": "1f7848ab3123fee08aa1a3781d7df1d8fa371a9b593d1ce1a98163756ee3b183",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "path": "original/stone-rough.jpg",
+      "bytes": 126517,
+      "sha256": "0c5f6f5838b3d9c7100987ac38629379ac914de975c139a5aee6a2f3deebdf2b",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "path": "original/stone.jpg",
+      "bytes": 541330,
+      "sha256": "1993381b7f7b2224e8302c6e34e3fb24346f2f9aaee0ab41e4ba2e21eac9cc06",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "path": "original/wood.jpg",
+      "bytes": 892183,
+      "sha256": "97000f31bf62c7fdd06d45635d6c90c600756b35ba4f4f89fb6c4129e5a6cf36",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "path": "shared/bano.glb.gz",
+      "bytes": 19345892,
+      "sha256": "399b45b369ce88bb2b059cf00a7470648201211dc59b3f8a075949166e30d420"
+    },
+    {
+      "path": "shared/counter.jpg",
+      "bytes": 445895,
+      "sha256": "d93a98bc5f2dcf4766541ad97fddc74349b36c468648a1dd2d84b4f670ac9822",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "path": "shared/fabric-normal.jpg",
+      "bytes": 493443,
+      "sha256": "3e179ae193f3ae0468e52db684d71e82a2c936df49222efad1c6d257c709eaf5",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "shared/fabric.jpg",
+      "bytes": 159950,
+      "sha256": "f1944ee10173eba40b317db534e1846b1a957418c4a343ee7d8a63703a090911",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "shared/layout.json",
+      "bytes": 4322,
+      "sha256": "7921c54da0ba8e80a55c3544dc897c8400158b88f1a4012684a594e970d9b52a"
+    },
+    {
+      "path": "shared/sky.hdr",
+      "bytes": 5451493,
+      "sha256": "5244534e9cf5b606f2ff513aa00ddb161b0a4826ffd88a0d3bd03ac29247d198"
+    },
+    {
+      "path": "shared/wood-normal.jpg",
+      "bytes": 449671,
+      "sha256": "fb3d03c0789ba5a7f9ae8d33a5d77a92bd9b6b230646b02b23198f959274b507",
+      "width": 2048,
+      "height": 2048
+    }
+  ],
+  "model": {
+    "path": "shared/bano.glb.gz",
+    "encoding": "gzip of glTF 2.0 GLB",
+    "decoder": "browser-native DecompressionStream(gzip)",
+    "uncompressedBytes": 28159964
+  },
+  "lightmaps": {
+    "channel": 1,
+    "encoding": "linear RGBM64",
+    "size": 4096,
+    "samples": 192,
+    "engine": "Blender 5.2.1 Cycles, Metal",
+    "variants": [
+      "original",
+      "nuevo"
+    ],
+    "decode": "rgb * alpha * 64 * PI; no sRGB conversion; no duplicate dynamic diffuse"
+  },
+  "decoders": [],
+  "sources": "See ASSET_LICENSES.md; all runtime resources are local."
+}
