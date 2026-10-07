@@ -96,7 +96,7 @@ async function start() {
     layout=JSON.parse(new TextDecoder().decode(data));
     controls=new WalkControls(app.camera,canvas,layout,()=>app.door);
     controls.pose(layout.cameras.diagonal.position,layout.cameras.diagonal.target,layout.cameras.diagonal.fov);
-    setQuality('auto');
+    setQuality('alto');
     document.querySelectorAll<HTMLButtonElement>('[data-design]').forEach(b=>b.addEventListener('click',()=>void chooseDesign(b.dataset.design as Design)));
     document.querySelectorAll<HTMLButtonElement>('[data-view]').forEach(b=>b.addEventListener('click',()=>void setView(b.dataset.view!)));
     $('#reset').addEventListener('click',()=>void setView('diagonal'));
