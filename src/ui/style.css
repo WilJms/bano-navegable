@@ -41,3 +41,5 @@
 /* Pantalla del baño siempre a tamaño completo, también al girar el celular */
 html,body{width:100%;height:100%;overflow:hidden;overscroll-behavior:none}
 #scene{position:fixed;inset:0;width:100%!important;height:100%!important}
+/* Franja de la cámara (notch) en horizontal: negra en vez de beige */
+:root,body{background:#000}
