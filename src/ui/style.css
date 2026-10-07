@@ -3,3 +3,38 @@
 @media(pointer:coarse),(max-width:650px),(max-width:950px) and (max-height:510px){.topbar{top:max(14px,env(safe-area-inset-top));left:16px;right:16px;flex-wrap:wrap;gap:12px}.identity{width:calc(100% - 84px)}.brand{font-size:28px}#finish-label{font-size:10px}.utilities{min-width:0;position:absolute;right:0;top:0;gap:6px}.utilities .icon-button{width:33px;height:33px}.designs{margin:auto;padding:4px;gap:2px;border-radius:11px}.designs button{min-width:132px;padding:9px 17px 9px 11px}.designs span{font-size:12px}.designs small{font-size:9px}.swatch{height:27px;width:25px}.bottom{bottom:max(16px,env(safe-area-inset-bottom));max-width:calc(100% - 28px);gap:7px}.viewbar{gap:0;padding:5px;border-radius:10px}.view-label{display:none}.viewbar>button:not(.icon-button){padding:10px 14px;font-size:11px}.divider{margin:0 3px}.viewbar .icon-button{width:32px;height:32px}.bottom-row{padding:5px 10px;gap:0;font-size:9px}.hint,#walk{display:none}.quality select{font-size:10px}.quality label{font-size:9px}.side-actions{right:16px;top:auto;bottom:145px;transform:none}.side-actions button{font-size:10px;padding:10px;gap:7px}.side-actions svg{width:17px}.touch-control{display:grid;place-items:center;position:absolute;left:24px;bottom:144px;width:106px;height:106px;border-radius:50%;border:1px solid #ffffffe0;background:#f6f4ed3d;backdrop-filter:blur(5px);touch-action:none;box-shadow:0 3px 25px #0001}.touch-control:before{content:'+';position:absolute;color:#fff9;font-size:62px;font-weight:200}#stick{width:43px;height:43px;border-radius:50%;background:#fbfaf7d9;box-shadow:0 2px 12px #0002}.touch-look{display:block;position:absolute;right:20px;bottom:250px;color:#374331;background:#faf9f1ad;border-radius:4px;padding:5px 8px;font-size:9px;pointer-events:none}.notice{bottom:270px;min-width:260px;font-size:11px}}
 @media(max-height:510px){.topbar{top:10px}.bottom{bottom:10px;gap:5px}.identity #finish-label{display:none}.designs button{padding:5px 14px}.designs small{display:none}.side-actions{bottom:107px;top:auto;transform:none}.touch-control{bottom:93px;width:83px;height:83px}.touch-look{bottom:205px}.bottom-row{padding:3px 10px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* ===== Celular: interfaz compacta para despejar la vista del baño ===== */
+@media (max-width:650px),(max-height:510px){
+  .topbar{top:max(8px,env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));gap:8px}
+  .brand{font-size:20px;letter-spacing:-1px}
+  #finish-label{display:none}
+  .identity{width:auto}
+  .utilities{gap:5px}
+  .utilities .icon-button{width:30px;height:30px}
+  .utilities svg{width:16px;height:16px}
+  .utilities #help{font-size:13px}
+  .designs{position:absolute;left:50%;top:0;transform:translateX(-50%);margin:0;padding:3px;gap:2px;border-radius:9px;box-shadow:0 3px 14px #14231114}
+  .designs button{min-width:0;padding:5px 11px 5px 6px;gap:7px;border-radius:7px}
+  .designs span{font-size:11px}
+  .swatch{width:16px;height:18px;border-radius:4px}
+  .bottom{bottom:max(8px,env(safe-area-inset-bottom));gap:4px}
+  .viewbar{padding:3px;border-radius:9px;box-shadow:0 3px 14px #14231115}
+  .viewbar>button:not(.icon-button){padding:6px 10px;font-size:11px}
+  .viewbar .icon-button{width:28px;height:28px}
+  .viewbar svg{width:16px;height:16px}
+  .divider{height:16px}
+  .bottom-row{padding:2px 8px;border-radius:6px;background:#fbfaf7c0}
+  .side-actions{right:max(12px,env(safe-area-inset-right));top:50%;bottom:auto;transform:translateY(-50%);gap:8px}
+  .side-actions button{width:42px;height:42px;padding:0;justify-content:center;border-radius:50%;background:#fbfaf7d9}
+  .side-actions button span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .side-actions svg{width:19px;height:19px}
+  .touch-control{left:max(14px,env(safe-area-inset-left));bottom:max(14px,env(safe-area-inset-bottom));width:88px;height:88px}
+  .touch-control:before{font-size:44px}
+  #stick{width:34px;height:34px}
+  .touch-look{display:none}
+  .notice{bottom:70px}
+}
+@media (max-width:650px) and (min-height:511px){
+  .touch-control{bottom:calc(max(8px,env(safe-area-inset-bottom)) + 70px)}
+  .notice{bottom:180px}
+}
